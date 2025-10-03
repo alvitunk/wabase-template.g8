@@ -1,0 +1,10 @@
+name: test_view
+table: person
+fields:
+- code
+- name
+
+name: add
+table: person
+fields:
+- code = demo(add(1,2))

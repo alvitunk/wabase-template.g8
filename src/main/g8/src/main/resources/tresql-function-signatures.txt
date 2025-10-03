@@ -1,0 +1,66 @@
+include /querease-function-signatures.txt
+
+//macro functions
+demo(e::any)::any
+
+any(subquery::any)::any // TODO signature
+all(subquery::any)::any // TODO signature
+array(arr::'any*')::any
+array_length(arr::any, dim::int)::int
+cast(value::any)::any
+chr(charCode::int)::string
+concat(str::'any*')::string
+concat_ws(sep::string, str::'any*')::string
+date(t::timestamp)::date
+date_part(text::string, timestamp::timestamp)::double // TODO or interval
+date_trunc(text::string, timestamp::timestamp)::timestamp // TODO or interval
+age(to::date, from::date)::timestamp //TODO or interval
+greatest(v::'any*')::'\$v'
+least(v::'any*')::'\$v'
+left(s::string, n::int)::string
+length(text::string)::int
+localtimestamp()::timestamp
+not(b::boolean)::boolean
+nullif(v1::any, v2::any)::'\$v1'
+replace(string::string, from::string, to::string)::string
+round(d::double, i::int)::double
+round(d::double)::int
+right(s::string, n::int)::string
+substring(s::string, n::int)::string
+substring(s::string, n::int, nn::int)::string
+to_char(t::timestamp, format::string)::string
+to_char(n::long, format::string)::string
+to_number(text::string, format::string)::double
+unnest(arr::any)::any // TODO signature
+pg_sleep(time::int)::any
+generate_series(a::any, b::any)::any
+generate_series(a::any, b::any, c::any)::any
+spellEurosLatvian(d::double)::string
+random()::double
+initcap(text::string)::string
+lateral(sql::any)::any
+
+// PostgisFunctionSignatures
+ST_AsText(geom::bytes)::string
+ST_SnapToGrid(geom::bytes, sizeX::float, sizeY::float)::bytes
+ST_AsTWKB(geom::bytes, decimalPrecision::int)::bytes
+ST_Transform(geom::bytes, srid::int)::bytes
+ST_SetSRID(geom::bytes, srid::int)::bytes
+ST_PolygonFromText(wktGeom::string, srid::int)::bytes
+ST_MakePoint(x::double, y::double)::bytes
+ST_AsLatLonText(p::string, f::string)::string
+ST_Y(geom::bytes)::double
+ST_X(geom::bytes)::double
+ST_DWithin(punktsGeography::bytes, punkts2Geography::bytes, radiusMeters::double)::boolean
+ST_Distance(punktsGeography::bytes, punkts2Geography::bytes)::double
+ST_Project(punkts::bytes, distance::int, radians::double)::bytes
+ST_Intersects(geom1::bytes, geom2::bytes)::boolean
+ST_Value(geom1::bytes, geom2::bytes)::double
+radians(angle::double)::double
+ST_Distance_Spheroid(geom1::bytes, geom2::bytes, spheroid::string)::double
+
+// aggregate functions
+array_agg(col::string)::any
+
+// basic db functions
+trim(string::string, characters::string)::string

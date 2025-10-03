@@ -1,0 +1,5 @@
+on: /hello
+do: org.wabase.WabaseServer.hello
+
+on: /test
+do: Abc.fn

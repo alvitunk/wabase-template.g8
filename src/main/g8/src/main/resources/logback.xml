@@ -1,0 +1,54 @@
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} %-5level %logger{36} %X{sourceThread} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!--
+      <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+          <file>/tmp/aaa_test.log</file>
+          <append>true</append>
+          <encoder>
+              <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} %-5level %logger{36} %X{sourceThread} - %msg%n</pattern>
+          </encoder>
+      </appender>
+  -->
+
+  <timestamp key="bySecond" datePattern="yyyy-MM-dd--HH-mm-ss"/>
+
+  <root level="warn">
+    <appender-ref ref="STDOUT" />
+    <!--<appender-ref ref="FILE" />-->
+  </root>
+
+  <logger name="com.zaxxer.hikari" level="warn"/>
+  <logger name="org.apache.pekko.stream.scaladsl.RestartWithBackoffSource" level="error"/>
+  <logger name="wabase.app.BusinessScenariosSpecs" level="info"/>
+
+  <!-- <logger name="org.wabase.tresql" level="debug"/> -->
+
+  <!-- specific route logger, format - <http method>.<uri path with slashes replaced with dots> -->
+  <!-- logger name="post.data.purchase_save" level="debug"/ -->
+
+  <!-- specific view logger -->
+  <!-- logger name="purchase_get.get" level="debug"/ -->
+
+  <!-- specific job logger -->
+  <!-- logger name="job-name.job" level="debug"/ -->
+
+  <!-- logger name="org.wabase.tresql" level="debug"/ -->
+
+  <!-- SPECIFIC tresql LOGGERS -->
+  <!-- tresql statement logger -->
+  <!-- logger name="org.wabase.tresql.tql" level="debug"/ -->
+  <!-- ort metadata logger -->
+  <!-- logger name="org.wabase.tresql.ort" level="debug"/ -->
+  <!-- sql statement logger -->
+  <!-- logger name="org.wabase.tresql.sql" level="debug"/ -->
+  <!-- tresql params logger -->
+  <!-- logger name="org.wabase.tresql.params" level="debug"/ -->
+  <!-- sql statement with embedded params logger -->
+  <!-- logger name="org.wabase.tresql.sql_wp" level="debug"/ -->
+</configuration>
+

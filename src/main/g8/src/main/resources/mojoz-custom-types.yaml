@@ -1,0 +1,88 @@
+type:       json
+xsd name:   string
+scala name: String
+yaml:
+  - json
+sql:
+  - jsonb
+
+type:       l_date
+xsd name:   date
+json name:  string
+scala name: java.time.LocalDate
+jdbc:
+  - DATE
+yaml:
+  - l_date
+sql:
+  - date
+
+type:       l_time
+xsd name:   time
+json name:  string
+scala name: java.time.LocalTime
+jdbc:
+  - TIME
+yaml:
+  - l_time
+sql:
+  - time
+
+type:       l_dateTime
+xsd name:   dateTime
+json name:  string
+scala name: java.time.LocalDateTime
+jdbc:
+  - TIMESTAMP
+yaml:
+  - l_dateTime
+sql:
+  - timestamp
+
+
+type:       instant
+xsd name:   dateTime
+json name:  string
+scala name: java.time.Instant
+jdbc:
+  - TIMESTAMP
+yaml:
+  - instant
+sql:
+  - timestamp
+
+
+type:       o_dateTime
+xsd name:   dateTime
+json name:  string
+scala name: java.time.OffsetDateTime
+jdbc:
+  - TIMESTAMP
+yaml:
+  - o_dateTime
+sql:
+  - timestamp
+
+
+type:       z_dateTime
+xsd name:   dateTime
+json name:  string
+scala name: java.time.ZonedDateTime
+jdbc:
+  - TIMESTAMP
+yaml:
+  - z_dateTime
+sql:
+  - timestamp
+
+
+type:       date
+scala name: java.sql.Date
+
+
+type:       time
+scala name: java.sql.Time
+
+
+type:       dateTime
+scala name: java.sql.Timestamp
