@@ -116,7 +116,7 @@ lazy val assemblySettings = Seq(
 lazy val root = (project in file("."))
   .enablePlugins(MojozPlugin, MojozGenerateSchemaPlugin)
   .settings(
-    name := "wabase-sample-project",
+    name := "$name$",
     libraryDependencies ++= dependencies ++ testsDependencies,
 
     // dependency overrides: force the single com.sun.* activation + mail impl
