@@ -7,7 +7,7 @@ libraryDependencies += "org.wabase" %% "wabase" % "8.0.0-RC11-SNAPSHOT"
 
 addSbtPlugin("org.mojoz" % "sbt-mojoz" % "5.0.0-RC3-SNAPSHOT")
 
-addSbtPlugin("nl.gn0s1s" % "sbt-dotenv" % "3.0.0")
+addSbtPlugin("nl.gn0s1s" % "sbt-dotenv" % "3.2.0")
 
 addSbtPlugin("io.spray" % "sbt-revolver" % "0.10.0")
 
